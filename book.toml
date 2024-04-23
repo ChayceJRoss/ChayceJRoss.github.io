@@ -6,4 +6,4 @@ src = "src"
 title = "Chayce Ross"
 
 [output.html]
-mathjax-support = true
+default-theme = "light"

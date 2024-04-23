@@ -1,0 +1,213 @@
+\documentclass[12pt]{article}
+\author{Chayce Ross}
+\usepackage[margin=1in]{geometry}
+\usepackage[all]{xy}
+
+
+\usepackage{amsmath,amsthm,amssymb,color,latexsym, multirow, enumitem, pdfpages}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{geometry}       
+\geometry{letterpaper}    
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\renewcommand\thesubsection{\alph{subsection}.}
+\title{MATH318 - HW \# 1}
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\begin{document}
+
+\maketitle
+\section*{Question 1}
+\begin{tabular}{ |c|c|  }
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Space} } \\
+    \hline
+    Outcome& P(Outcome)\\
+    \hline
+
+HH & \((0.5)^{2} = 0.25\) \\
+THH & \((0.5)^{3} = 0.125\) \\
+HTHH & \((0.5)^{4} = 0.0625 \) \\
+TTHH & \((0.5)^{4} = 0.0625\) \\
+TTTTT & \((0.5)^{5} = 0.03125 \) \\
+HTTTT & \((0.5)^{5} = 0.03125\) \\
+THTTT & \((0.5)^{5} = 0.03125\) \\
+TTHTT & \((0.5)^{5} = 0.03125\) \\
+TTTHT & \((0.5)^{5} = 0.03125\) \\ 
+TTTTH & \((0.5)^{5} = 0.03125\) \\
+HTHTT & \((0.5)^{5} = 0.03125\) \\ 
+HTTHT & \((0.5)^{5} = 0.03125\) \\ 
+HTTTH & \((0.5)^{5} = 0.03125\) \\ 
+THTHT & \((0.5)^{5} = 0.03125\) \\
+THTTH & \((0.5)^{5} = 0.03125\) \\
+TTHTH & \((0.5)^{5} = 0.03125\) \\
+TTTHH & \((0.5)^{5} = 0.03125\) \\
+HTHTH & \((0.5)^{5} = 0.03125\) \\
+HTTHH & \((0.5)^{5} = 0.03125\) \\ 
+THTHH & \((0.5)^{5} = 0.03125\) \\ 
+\hline\hline
+\multicolumn{2}{|c|}{\(\sum_{O} P(O) = P(S) = 1  \quad \checkmark\)  } \\
+\hline
+\end{tabular}
+\section*{Question 2}
+\begin{enumerate}[label=\alph*)]
+    \item \(F E^{c} G^{c}  \) \vspace{-0.5\baselineskip}
+    \item \(EFG^{c} \) \vspace{-0.5\baselineskip}
+    \item \(E \cup F \cup G\)\vspace{-0.5\baselineskip}
+    \item \(EF \cup EG \cup GF\)\vspace{-0.5\baselineskip}
+    \item \(EFG\)\vspace{-0.5\baselineskip}
+    \item \(E^{c} F^{c} G^{c} \) \vspace{-0.5\baselineskip}
+    \item \(EF^{c} G^{c} \cup E^{c} FG^{c} \cup E^{c} F^{c} G \cup E^{c} F^{c} G^{c} \)\vspace{-0.5\baselineskip}
+    \item \((EFG)^{c} \)  \vspace{-0.5\baselineskip}
+\end{enumerate}
+\section*{Question 3}
+To find the count of the sample space we choose any \(60\) beetles from the pond of \(N\) beetles. 
+\[
+    N(S) = \frac{n!}{60!(n-60)!} = \begin{pmatrix}
+         n \\
+         60 \\
+    \end{pmatrix}   
+\]
+Let the event where we have \(i\) marked beetles of the 60 be \(E_i\). We first choose \(i\) beetles from the 40 marked beetles, then choose \(60 - i\) beetles from the 
+unmarked beetles. 
+\[
+    N(E_i) = \begin{pmatrix}
+         40 \\
+         i \\
+    \end{pmatrix} \cdot  \begin{pmatrix}
+         n - 40 \\
+        60 - i  \\
+    \end{pmatrix}
+\]
+For the case where we choose \(12\) beetles. 
+\[
+    N(E_{12} ) = \begin{pmatrix}
+        40 \\
+        12 \\
+   \end{pmatrix} \cdot  \begin{pmatrix}
+        n - 40 \\
+       48  \\
+   \end{pmatrix}
+\]
+Therefore the probability \(L(n)\) where we choose \(12\) marked beetles from the pond. 
+\[
+    L(n) = \frac{40!}{28!12!}\cdot  \frac{(n - 40)!}{(n - 88)!48!} \cdot  \left( \frac{n!}{60!(n-60)!} \right) ^{-1} 
+\] 
+Finally to find the maximum likelihood we find where \(\frac{L(n)}{L(n - 1)} = 1\), ignoring any constants as they will cancel out:
+\begin{align*}
+    &\frac{L(n)}{L(n - 1)} = 1 = \frac{(n - 40)!}{(n - 41)!} \cdot  \frac{(n  - 60)!}{(n - 61)!} \cdot  \frac{(n - 1)!}{n!} \cdot  \frac{(n - 89)!}{(n - 88)!} \\
+    &\frac{(n - 40 )(n - 60)}{n ( n - 88)} = 1 \\ \\
+    &\therefore \, n = 200
+\end{align*}
+\section*{Question 4}
+\begin{enumerate}[label=\alph*)]
+    \item The total count of the sample space for poker hands is choosing any \(5\) cards from \(52\). 
+    \[
+        N(S) = \begin{pmatrix}
+             52 \\
+             2 \\
+        \end{pmatrix} = 2\,598\,960
+    \]
+    Now let \(E_i\) be the case where we have one pair and \(E_{ii}\) two pairs.  
+    \begin{enumerate}
+        \item [i)] To find the event with one pair, we choose 1 number from 13, then we choose 2 suits from that number, next we choose any 3 numbers of the remaining 12
+        finally choosing any suit from each of those 3 numbers. 
+        \begin{align*}
+            N(E_i) &= \begin{pmatrix}
+                 13 \\
+                1\\
+            \end{pmatrix} 
+            \begin{pmatrix}
+                 4 \\
+                 2 \\
+            \end{pmatrix}
+            \begin{pmatrix}
+                12 \\
+                 3 \\
+            \end{pmatrix}
+            \begin{pmatrix}
+                 12 \\
+                 3 \\
+            \end{pmatrix} 
+            \begin{pmatrix}
+                 4 \\
+                 1 \\
+            \end{pmatrix}
+            \begin{pmatrix}
+                4 \\
+                1 \\
+           \end{pmatrix}
+           \begin{pmatrix}
+            4 \\
+            1 \\
+       \end{pmatrix} = 1 \, 098 \, 240 \\
+       P(E_i) &= 0.42256
+    \end{align*}
+    \item[ii)] For two pairs, we must choose 2 numbers from the 13 to be our pairs, then for each of those numbers choose 2 suits, finally choose one number from the remaining 11 and a suit. 
+    \begin{align*}
+        N(E_{i i}) &= \begin{pmatrix}
+            13 \\
+           2\\
+       \end{pmatrix} 
+       \begin{pmatrix}
+            4 \\
+            2 \\
+       \end{pmatrix} ^{2} 
+       \begin{pmatrix}
+           11 \\
+            1 \\
+       \end{pmatrix}
+       \begin{pmatrix}
+            4 \\
+            1 \\
+       \end{pmatrix}  = 123 \, 552 \\
+       P(E_{i i}) &= 0.04754
+    \end{align*}
+    \end{enumerate}
+    \item For poker dice the sample space count is found by choosing one number from the 6 sides 5 times in a row. 
+    \[
+        N(S) = 6^{5} = 7\,776 
+    \]
+    \begin{enumerate}
+        \item [i)] To get one pair we choose 2 dice for the pair. We can group the 5 dice into 4 "groups" 
+        from the first group we have 6 possible numbers, the second 5 and so on so forth. 
+        \begin{align*}
+            N(E_i) &= \begin{pmatrix}
+                 5 \\
+                 2 \\
+            \end{pmatrix} \cdot  6 \cdot  5 \cdot  4 \cdot  3 = 3600\\
+            P(E_{i}) &= 0.463
+        \end{align*}
+        \item[ii)] For two pairs, I have 3 "groups" for the two pairs we can choose any two numbers from the 6, then we have 4 numbers left for the remaining dice. 
+        The 5 dice can be arranged in \(5!\) ways, and we must divide by \((2!)^{2} \) to account for the repetitions in the pairs. 
+        \begin{align*}
+            N(E_{ii}) &= \begin{pmatrix}
+                 6 \\
+                 2 \\
+            \end{pmatrix} \cdot  4 \cdot  \frac{5!}{2!2!} = 1800\\
+            P(E_{i i}) &= 0.2315
+        \end{align*}
+    \end{enumerate}
+\end{enumerate}
+\section*{Question 5}
+\begin{enumerate}
+    \item[a)] Following the suggestion from the question we can line up \(m - 1\) lines and \(n\) stars. e.g. `` \(| | | | | * * * * * *\, * \) ''  would be the 
+    initial arrangement for \(6\) urns and \(7\) balls. The total number arrangements of the elements in this string is, \((m - 1 + n)!\) divided by \((m - 1)!\) and \(n!\) to 
+    account for the repetitions:
+    \[
+        N(S_{mn}) = \frac{(m - 1 + n)!}{n! (m - 1)!} = \begin{pmatrix}
+             m - 1 + n \\
+             n \\
+        \end{pmatrix}
+    \] 
+    \item[b)] For the Fermi Dirac case with \(m \geq  n\)  once an urn has a ball it can no longer have another ball. `` \(\bullet \bullet \circ \circ \circ\) '' is an example of an arrangement with 5 urns and 2 balls. 
+    The total arrangements for this case is \(m!\) divided by \(n!\) for the repetitions of full urns and \((m - n)!\) for the repetitions of empty urns.  
+    \[
+        N(S_{mn} ) = \frac{m!}{n!(m - n)!} = \begin{pmatrix}
+             m  \\
+             n \\
+        \end{pmatrix}
+    \]
+\end{enumerate}
+\includepdf[pages=-]{q6.pdf}
+\end{document}

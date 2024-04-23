@@ -13,6 +13,9 @@
 
 - [School Work](./School_Work/README.md)
     - [Capstone](./School_Work/capstone.md)  
+        - [3D Meshing](./School_Work/math.md)
+        - [Stochastic Modelling](./School_Work/horns.md)
+        - [Report](./School_Work/report.md)
 
 # Writings
 
