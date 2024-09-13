@@ -1,0 +1,10 @@
+---
+const { href, title } = Astro.props;
+---
+
+<section id={title} class="bg-gray-100 flex flex-col align-middle text-middle scroll-m-[80px]">
+        <h1 class="self-center sm:self-start text-black mt-10 sm:ml-10 font-[700] text-[3rem] md:font-[700] md:text-[4rem]">{title}</h1>
+        <div class="py-10 flex flex-row md:flex-wrap justify-center gap-3 w-auto overflow-x-auto flex-nowrap z-30">
+            <slot />
+        </div>
+</section>

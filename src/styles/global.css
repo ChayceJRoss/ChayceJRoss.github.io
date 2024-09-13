@@ -1,0 +1,43 @@
+:root {
+    --primary: 20, 33, 61;
+    --primary-light: 46, 85, 115;
+    --accent: 252, 163, 17;
+    --secondary: 229, 229, 229;
+    --accent-gradient: linear-gradient(
+        45deg,
+        rgb(var(--primary)),
+        rgb(var(--primary-light)) 30%,
+        white 60%
+    );
+}
+html {
+    scroll-behavior: smooth;
+    font-family: "Inter Variable", sans-serif;
+    background: white;
+}
+
+main {
+		margin: auto;
+		/* padding: 1rem; */
+		max-width: calc(100% - 2rem);
+		max-width: 1280px;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+
+code {
+    font-family:
+        Menlo,
+        Monaco,
+        Lucida Console,
+        Liberation Mono,
+        DejaVu Sans Mono,
+        Bitstream Vera Sans Mono,
+        Courier New,
+        monospace;
+}
+
+html, body { margin: 0; padding: 0; } 
+body {
+    padding-bottom: 10px;
+}
