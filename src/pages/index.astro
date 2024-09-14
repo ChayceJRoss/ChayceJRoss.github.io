@@ -45,24 +45,10 @@ const projectPosts = projectCollection.map(({data, slug}) => {
 
 <Layout title="Chayce Ross">
 	<main class="flex flex-col gap-2">
-		<IndexSection title="Projects">
+		<IndexSection title="Hi, I'm Chayce!">
 			{
 				projectPosts.map(({title, blurb, slug}) => (
 					<Card href={slug} title={title} body={blurb}/>
-				))
-			}
-		</IndexSection>
-		<IndexSection title="Blog">
-			{
-				blog_cards.map(({title, href, body}) => (
-					<Card href={href} title={title} body={body}/>
-				))
-			}
-		</IndexSection>
-		<IndexSection title="Experience">
-			{
-				blog_cards.map(({title, href, body}) => (
-					<Card href={href} title={title} body={body}/>
 				))
 			}
 		</IndexSection>

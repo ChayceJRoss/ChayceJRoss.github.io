@@ -13,6 +13,7 @@ export default {
 				"accent": "rgb(var(--accent))",
 				"primary": "rgb(var(--primary))",
 				"primary-light": "rgb(var(--primary-light))",
+				"accent-light": "rgb(var(--accent-light))",
 				"secondary": "rgb(var(--secondary))",
 			}
 		},

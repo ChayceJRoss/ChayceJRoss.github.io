@@ -43,7 +43,7 @@ main a {
     text-decoration: underline;
 }
 
-p {
+p, ul, ol {
     font-family: 'Merriweather', serif;
     margin-bottom: 0.5rem;
     font-size: 1.25rem;

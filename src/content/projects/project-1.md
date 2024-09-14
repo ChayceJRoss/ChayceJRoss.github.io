@@ -1,6 +1,6 @@
 ---
 title : Robot Summer
-blurb : Robot competition that I came third in at UBC involving firmware engineering, robotics and mechanical design.
+blurb : Participating in a robot line following competition is an exhilarating journey that combines technical prowess with strategic thinking. The challenge involves designing and building a robot capable of autonomously navigating a black line on a white surface, often at high speeds.
 date : 2024-09-12
 ---
 Participating in a robot line following competition is an exhilarating journey that combines technical prowess with strategic thinking. The challenge involves designing and building a robot capable of autonomously navigating a black line on a white surface, often at high speeds. 
