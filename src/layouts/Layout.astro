@@ -1,39 +1,22 @@
----
-interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
-
-import '@fontsource-variable/inter'
-import '@fontsource/merriweather/300.css';
-import '../styles/global.css'
-import NavBar from '../components/NavBar.astro';
-import type { ComponentProps } from 'astro/types';
-
-type NavBarProps = ComponentProps<typeof NavBar>
-const navbar_links : NavBarProps = {
-	links : [
-		{title : "Projects", href : "#Projects"},
-		{title : "Blog", href : "#Blog"},
-		{title : "Experience", href : "#Experience"},
-	]
-}
----
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Portfolio site for Chayce Ross (github.com/ChayceJRoss)" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="stylesheet" href="/prism.css" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Astro Basics</title>
 	</head>
 	<body>
-		<NavBar links={navbar_links.links}/>
 		<slot />
 	</body>
 </html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+	}
+</style>
