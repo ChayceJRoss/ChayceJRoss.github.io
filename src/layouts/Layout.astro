@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/jetbrains-mono";
 import SideBar from "../components/SideBar.astro";
+import Hamburger from "../assets/hamburger.svg";
 ---
 
 <!doctype html>
@@ -12,9 +13,28 @@ import SideBar from "../components/SideBar.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Chayce Ross Blog</title>
 	</head>
-	<body class="flex flex-row overflow-hidden">
+	<body
+		class="flex flex-col lg:flex-row overflow-hidden"
+		x-data="{ open : true }"
+	>
 		<SideBar />
-		<main class="w-full overflow-y-scroll flex flex-col items-center">
+		<div
+			class="sticky top-0 lg:hidden w-full h-16 flex flex-row z-5 justify-start items-center px-4"
+		>
+			<button
+				x-on:click="open = !open"
+				class="text-left font-bold text-lg hover:cursor-pointer w-10"
+			>
+				<img
+					class="transition-transform"
+					src={Hamburger.src}
+					width="20"
+					:class="open ? 'rotate-90' : ''"
+				/>
+			</button>
+			<h1 class="text-center grow pr-[20px]">Chayce Ross</h1>
+		</div>
+		<main class="w-full overflow-y-scroll flex flex-col items-center p-6">
 			<slot />
 		</main>
 	</body>

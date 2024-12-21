@@ -9,13 +9,54 @@ const projects = await getCollection("projects");
 ---
 
 <Layout>
-	<div class="w-full md:w-[80%] h-full flex flex-col gap-8">
-		<section class="mt-40">
+	<div class="w-full md:w-[90%] h-full flex flex-col gap-8">
+		<section class="lg:mt-40">
 			<h1 class="text-xl font-bold">Hi! I'm Chayce</h1>
 			<p>
 				I am a UBC Student studying <b>Engineering Physics</b>. I am
 				interested in Full Stack Web Development.
 			</p>
+		</section>
+
+		<section>
+			<h1 class="font-bold text-xl mb-1">Projects</h1>
+			<ul class="flex flex-col gap-2">
+				{
+					projects.map((project) => (
+						<li id={project.id}>
+							<a
+								href={`/projects/${project.id}`}
+								class="font-bold hover:underline hover:text-blue-800"
+							>
+								{project.data.title}
+							</a>
+							<p class="text-sm font-light">
+								{project.data.blurb}
+							</p>
+						</li>
+					))
+				}
+			</ul>
+		</section>
+		<section>
+			<h1 class="font-bold text-xl mb-1">Projects</h1>
+			<ul class="flex flex-col gap-2">
+				{
+					projects.map((project) => (
+						<li id={project.id}>
+							<a
+								href={`/projects/${project.id}`}
+								class="font-bold"
+							>
+								{project.data.title}
+							</a>
+							<p class="text-sm font-light">
+								{project.data.blurb}
+							</p>
+						</li>
+					))
+				}
+			</ul>
 		</section>
 		<section>
 			<h1 class="font-bold text-xl mb-1">Projects</h1>

@@ -1,9 +1,27 @@
 ---
-
+import Hamburger from "../assets/hamburger.svg";
 ---
 
-<nav class="flex flex-col gap-2 p-4 w-60 sticky top-0">
-    <a href="/" class="font-bold text-lg hover:cursor-pointer">Chayce Ross</a>
+<nav
+    class="z-10 inset-2 absolute lg:relative lg:inset-0 flex flex-col gap-2 p-4 w-60 rounded-lg bg-opacity-50 bg-gray-100 lg:bg-white backdrop-blur-sm transition-transform"
+    :class="open ? '' : '-translate-x-full -left-10 lg:translate-x-0 lg:inset-0'"
+    x-transition
+>
+    <div class="flex flex-row justify-start items-center gap-2">
+        <button
+            x-on:click="open = !open"
+            class="text-left font-bold text-lg hover:cursor-pointer"
+        >
+            <img
+                class="transition-transform lg:hidden"
+                src={Hamburger.src}
+                width="20"
+                :class="open ? 'rotate-90' : ''"
+            />
+        </button>
+        <a href="/">Chayce Ross </a>
+    </div>
+
     <hr class="mb-10 border border-b-2 border-black rounded-sm" />
     <a href="/projects" class="">Projects</a>
     <a href="/about" class="">About</a>
