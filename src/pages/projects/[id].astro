@@ -12,21 +12,33 @@ export async function getStaticPaths() {
 // 2. For your template, you can get the entry directly from the prop
 const { post } = Astro.props;
 const { Content } = await render(post);
-import Up from "../../assets/up.svg"
-import Github from "../../assets/github.svg"
+import Up from "../../assets/up.svg";
+import Github from "../../assets/github.svg";
 ---
 
 <Layout>
     <div class="flex flex-row justify-center items-center">
-        <a href={post.data.github} class="flex flex-row items-center rounded-lg" target="_blank"><img src={Github.src} alt="Link to repo" width="30"></a>
-        <h1 id="top" class="w-full text-center text-2xl font-bold p-4 align-middle">{post.data.title}</h1>
+        <a
+            href={post.data.github}
+            class="flex flex-row items-center rounded-lg"
+            target="_blank"
+            ><img src={Github.src} alt="Link to repo" width="30" /></a
+        >
+        <h1
+            id="top"
+            class="w-full text-center text-2xl font-bold p-4 align-middle"
+        >
+            {post.data.title}
+        </h1>
     </div>
-    <article class="prose prose-zinc mt-5">
+    <article class="prose-sm md:prose prose-zinc mt-5">
         <p><strong>Summary: </strong> {post.data.blurb}</p>
         <Content />
     </article>
-    <a href="#top" class="bg-white absolute bottom-8 right-8 p-2 shadow-lg rounded-md">
-        <img src={Up.src} alt="">
+    <a
+        href="#top"
+        class="bg-white absolute bottom-8 right-8 p-2 shadow-lg rounded-md"
+    >
+        <img src={Up.src} alt="" />
     </a>
 </Layout>
-
