@@ -1,28 +1,23 @@
 ---
-title: Autonomous Racing Car
-blurb: Placed 3rd of 21 teams in a race for autonomous line following robots from scratch. 
+priority: 1
+title: Augmented Reality Development for Spinal Surgery
+blurb: Builing an augmented reality application to guide surgeons performing spinal injections. 
+skills: Unity, C#, Python (Django), Parallel Programming (Shaders)
 github: https://github.com/ChayceJRoss/ENPH353.git
 ---
 
-*   [Overview](#overview)
-    *   [Philosophy](#philosophy)
-    *   [Inline HTML](#html)
-    *   [Automatic Escaping for Special Characters](#autoescape)
-*   [Block Elements](#block-elements)
-    *   [Paragraphs and Line Breaks](#p)
-    *   [Headers](#header)
-    *   [Blockquotes](#blockquote)
-    *   [Lists](#list)
-    *   [Code Blocks](#precode)
-    *   [Horizontal Rules](#hr)
-*   [Span Elements](#span)
-    *   [Links](#link)
-    *   [Emphasis](#em)
-    *   [Code](#code)
-    *   [Images](#img)
-*   [Miscellaneous](#misc)
-    *   [Backslash Escapes](#backslash)
-    *   [Automatic Links](#autolink)
+- [Overview](#overview)
+  - [Philosophy](#philosophy)
+- [Block Elements](#block-elements)
+  - [Paragraphs and Line Breaks](#paragraphs-and-line-breaks)
+  - [Headers](#headers)
+  - [Blockquotes](#blockquotes)
+  - [Lists](#lists)
+  - [Code Blocks](#code-blocks)
+- [Span Elements](#span-elements)
+  - [Links](#links)
+  - [Emphasis](#emphasis)
+  - [Code](#code)
 
 
 **Note:** This document is itself written using Markdown; you
