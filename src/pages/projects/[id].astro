@@ -18,12 +18,12 @@ import Github from "../../assets/github.svg";
 
 <Layout>
     <div class="flex flex-col md:flex-row justify-center items-center">
-        <a
+        {post.data.github && <a
             href={post.data.github}
             class="flex flex-row items-center rounded-lg"
             target="_blank"
             ><img src={Github.src} alt="Link to repo" width="30" /></a
-        >
+        >}
         <h1
             id="top"
             class="w-full text-center text-2xl font-bold p-4 align-middle"
@@ -32,7 +32,7 @@ import Github from "../../assets/github.svg";
         </h1>
     </div>
     <article
-        class="prose-sm max-w-none md:prose md:max-w-[65c] prose-zinc mt-5"
+        class="prose-sm max-w-none md:prose md:max-w-[65c] prose-zinc mt-5 pb-5"
     >
         <p><strong>Summary: </strong> {post.data.blurb}</p>
         <Content />

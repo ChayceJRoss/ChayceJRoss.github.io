@@ -22,14 +22,24 @@ const projects = await getCollection("projects");
 			/>
 			<div class="flex flex-col gap-4">
 				<h1 class="text-xl font-bold text-center">Hi! I'm Chayce</h1>
-				<p>
-					I am a UBC Student studying <b>Engineering Physics</b>. I am
-					interested in Full Stack Web Development.
-				</p>
+<p class="font-light">
+  Hi, I'm Chayce — an <strong>Engineering Physics</strong> student at UBC with a passion for medical-imaging software. I'm currently in R&amp;D at Prisman Labs, creating virtual-surgical-planning tools for mandibular free-flap reconstruction.
+</p>
+
+<p class="font-light">
+  My toolkit spans C++ and Python for 3D&nbsp;Slicer and VTK-based pipelines. I have also built OpenXR-powered AR workflows in Unity for the Meta&nbsp;Quest&nbsp;3 and written GLSL compute shaders for real-time mesh reconstruction.
+</p>
+
+
+<!-- <p class="font-light">
+  Beyond medical imaging, I enjoy full-stack web development with React&nbsp;/&nbsp;Next.js, where I have and maintain CI/CD pipelines using GitHub Actions, Docker, and Oracle Cloud.
+</p> -->
+
 			</div>
 		</section>
 		<section>
-			<h1 class="font-bold text-2xl text-center">Projects</h1>
+			<h1 class="font-bold text-2xl text-center mb-2">Projects</h1>
+			<h2 class="font-bold text-lg text-left">Medical Imaging</h2>
 			<ul class="flex flex-col gap-2">
 				{
 					projects
@@ -38,7 +48,7 @@ const projects = await getCollection("projects");
 							<li id={project.id} class="p-2 rounded-md">
 								<a
 									href={`/projects/${project.id}`}
-									class="font-bold hover:underline text-blue-800"
+									class="font-bold underline text-blue-800"
 								>
 									{project.data.title}
 								</a>

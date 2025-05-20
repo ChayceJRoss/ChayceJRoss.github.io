@@ -10,11 +10,17 @@ import Hamburger from "../assets/hamburger.svg";
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
+			integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
+			crossorigin="anonymous"
+		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>Chayce Ross Blog</title>
 	</head>
 	<body
-		class="flex flex-col lg:flex-row overflow-hidden"
+		class="flex flex-col lg:flex-row"
 		x-data="{ open : false }"
 	>
 		<SideBar />
@@ -35,7 +41,7 @@ import Hamburger from "../assets/hamburger.svg";
 			<h1 class="text-center grow pr-[20px]">Chayce Ross</h1>
 		</div>
 		<main
-			class="px-4 lg:px-0 w-full overflow-y-scroll flex flex-col items-center"
+			class="px-4 lg:px-0 w-full max-h-full overflow-y-scroll flex flex-col items-center"
 		>
 			<slot />
 		</main>
@@ -48,9 +54,9 @@ import Hamburger from "../assets/hamburger.svg";
 		font-family: "JetBrains Mono Variable", monospace;
 		margin: 0;
 		width: 100%;
-		height: 100%;
+		height: 100vh;
 		scroll-behavior: smooth !important;
-		overflow-x: hidden;
+		overflow: hidden;
 	}
 	main {
 		scroll-behavior: smooth;
