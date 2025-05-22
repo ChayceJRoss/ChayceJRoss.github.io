@@ -11,9 +11,9 @@ The goal of this project was to use the Meta Quest 3 AR headset to assist radiol
 Here I try to summarise some of the key algorithms we used for registration. 
 
 ## Sections
-- Horns Method
-- Controller Calibration
-- Results
+- [Horns Method](#horns-method-for-point-cloud-registration)
+- [Controller Calibration](#controller-calibration)
+- [Results](#results)
 
 ## Horn's Method For Point Cloud Registration
 _Much of the work in this section of the project was based off of [Robotics Knowledge](https://roboticsknowledgebase.com/wiki/math/registration-techniques/)._
