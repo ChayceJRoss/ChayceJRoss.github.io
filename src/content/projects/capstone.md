@@ -2,7 +2,7 @@
 priority: 1
 title: Augmented Reality Development for Spinal Surgery
 blurb: Built an augmented reality application to guide surgeons performing spinal injections. 
-skills: Unity, C#, Python (Django), GPU Parallel Programming (Shaders)
+skills: Unity, C#, Medical Registration, GPU Parallel Programming (Shaders)
 # github: https://github.com/ChayceJRoss/ENPH353.git
 ---
 ## The Problem
