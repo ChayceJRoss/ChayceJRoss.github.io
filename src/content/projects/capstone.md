@@ -6,7 +6,7 @@ skills: Unity, C#, Medical Registration, GPU Parallel Programming (Shaders)
 # github: https://github.com/ChayceJRoss/ENPH353.git
 ---
 ## The Problem
-The goal of this project was to use the Meta Quest 3 AR headset to assist radioligst performing [spinal injections](https://my.clevelandclinic.org/health/treatments/22091-lumbar-epidural-steroid-injection) at UBC Hospital. To acheive this we devised a method for registering a patient using the Quest 3 controller and metal fiducials to overlay the CT image data over the patient and project a trajectory for the physician in the AR world from the headset. 
+The goal of this project was to use the Meta Quest 3 AR headset to assist radiologist performing [spinal injections](https://my.clevelandclinic.org/health/treatments/22091-lumbar-epidural-steroid-injection) at UBC Hospital. To achieve this we devised a method for registering a patient using the Quest 3 controller and metal fiducials to overlay the CT image data over the patient and project a trajectory for the physician in the AR world from the headset. 
 
 Here I try to summarise some of the key algorithms we used for registration. 
 
@@ -18,7 +18,7 @@ Here I try to summarise some of the key algorithms we used for registration.
 ## Horn's Method For Point Cloud Registration
 _Much of the work in this section of the project was based off of [Robotics Knowledge](https://roboticsknowledgebase.com/wiki/math/registration-techniques/)._
 
-In order to find a transformation from the CT Scans ("CT World") to the AR world we used **Horn's Method**. The goal of Horns Method is to find a tranform (uniform scale, rotation and translation) that minimises the error between one set of, $N$, fiducials (Left Hand) to another set of corresponding fiducials (Right Hand). More formally: 
+In order to find a transformation from the CT Scans ("CT World") to the AR world we used **Horn's Method**. The goal of Horns Method is to find a transform (uniform scale, rotation and translation) that minimises the error between one set of, $N$, fiducials (Left Hand) to another set of corresponding fiducials (Right Hand). More formally: 
 $$
     (t, s, R) = \text{{argmin}} \sum |e_i|^2 
 $$
