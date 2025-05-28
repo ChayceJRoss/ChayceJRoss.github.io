@@ -20,11 +20,11 @@ import Hamburger from "../assets/hamburger.svg";
 		<title>Chayce Ross Blog</title>
 	</head>
 	<body class="flex flex-col lg:flex-row" x-data="{ open : false }">
-		<!-- <SideBar /> -->
+		<SideBar />
 		<header
 			class="sticky top-0 lg:hidden w-full min-h-12 flex flex-row z-5 justify-start items-center px-4"
 		>
-			<!-- <button
+			<button
 				x-on:click="open = !open"
 				class="text-left font-bold text-lg hover:cursor-pointer w-10"
 			>
@@ -34,7 +34,7 @@ import Hamburger from "../assets/hamburger.svg";
 					width="20"
 					:class="open ? 'rotate-90' : ''"
 				/>
-			</button> -->
+			</button>
 			<a href="/" class="text-center grow pr-[20px]">Chayce Ross</a>
 		</header>
 		<main
